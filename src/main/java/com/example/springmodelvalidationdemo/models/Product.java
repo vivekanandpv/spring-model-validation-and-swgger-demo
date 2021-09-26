@@ -8,7 +8,7 @@ public class Product {
     //  https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation
 
     //  Learn more about javax validation api:
-    //  https://docs.oracle.com/javaee/7/api/javax/validation/constraints/package-summary.html
+    //  https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/package-summary.html
 
     @Min(value = 1001)
     @Max(value = 10000)
