@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ErrorHandlerAdvice {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ValidationErrorPageViewModel> handleValidationException(MethodArgumentNotValidException exception) {
-        return ResponseEntity.badRequest().body(AppUtils.getValidationErrorPage(exception));
+        return ResponseEntity.badRequest().body(AppUtils.getValidationErrorPage(exception, exception.getBindingResult().getTarget().getClass()));
     }
 }

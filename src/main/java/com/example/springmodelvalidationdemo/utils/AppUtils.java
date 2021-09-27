@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class AppUtils {
-    public static ValidationErrorPageViewModel getValidationErrorPage(MethodArgumentNotValidException exception) {
+    public static ValidationErrorPageViewModel getValidationErrorPage(MethodArgumentNotValidException exception, Class<?> modelClass) {
         List<DomainErrorViewModel> domainErrors = exception
                 .getBindingResult()
                 .getFieldErrors()
@@ -22,7 +22,7 @@ public class AppUtils {
 
 
         return new ValidationErrorPageViewModel(
-                Product.class.getName(),
+                modelClass.getName(),
                 LocalDateTime.now(),
                 domainErrors
         );
