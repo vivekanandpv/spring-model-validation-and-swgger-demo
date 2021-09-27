@@ -7,7 +7,7 @@ public class Product {
     //  Required dependency: Spring Boot Starter Validation:
     //  https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation
 
-    //  Learn more about javax validation api:
+    //  Learn more about javax validation api here:
     //  https://javaee.github.io/javaee-spec/javadocs/javax/validation/constraints/package-summary.html
 
     @Min(value = 1001)
