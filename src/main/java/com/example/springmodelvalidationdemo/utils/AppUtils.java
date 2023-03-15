@@ -22,7 +22,7 @@ public class AppUtils {
 
 
         return new ValidationErrorPageViewModel(
-                Product.class.getName(),
+                exception.getBindingResult().getTarget().getClass().getName(),
                 LocalDateTime.now(),
                 domainErrors
         );
