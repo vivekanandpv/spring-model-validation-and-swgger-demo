@@ -20,9 +20,8 @@ public class AppUtils {
                 .sorted(Comparator.comparing(DomainErrorViewModel::getField))
                 .collect(Collectors.toList());
 
-
         return new ValidationErrorPageViewModel(
-                Product.class.getName(),
+                exception.getBindingResult().getTarget().getClass().getName(),
                 LocalDateTime.now(),
                 domainErrors
         );
